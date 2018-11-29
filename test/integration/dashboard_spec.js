@@ -15,6 +15,6 @@ describe('Dashboard', function() {
 
         cy.visit('/dashboard');
 
-        cy.contains('2').should('exist');
+        cy.contains('3').should('exist');
     });
 });
