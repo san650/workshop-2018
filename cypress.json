@@ -1,0 +1,12 @@
+{
+  "baseUrl": "http://localhost:3001",
+  "video": false,
+  "fixturesFolder": false,
+  "integrationFolder": "test",
+  "screenshotsFolder": "tmp/screenshots",
+  "supportFile": "test/support",
+  "videosFolder": "tmp/videos",
+  "ignoreTestFiles": "!*_spec.js",
+  "pluginsFile": "test/support/plugins/index.js",
+  "watchForFileChanges": false
+}
