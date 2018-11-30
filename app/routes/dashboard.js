@@ -12,9 +12,16 @@ router.get('/', function(req, res) {
       openIssues.filter(issue => issue.severity === 'High').length / openIssuesCount;
   }
 
+  let mediumIssuesCount = 0;
+  if (openIssuesCount > 0) {
+    mediumIssuesCount =
+      openIssues.filter(issue => issue.severity === 'Medium').length / openIssuesCount;
+  }
+
   res.render('dashboard', {
     openIssuesCount,
-    highIssuesCount
+    highIssuesCount,
+    mediumIssuesCount
   });
 });
 

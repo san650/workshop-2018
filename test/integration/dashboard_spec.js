@@ -48,4 +48,25 @@ describe('Dashboard', function() {
             .should("contain", "High")
             .should("contain", "0%");
     });
+
+    it('show medium severity gauge', function() {
+        cy.fixture({
+            title: "Issue 1",
+            status: "open",
+            severity: "Medium"
+        });
+        cy.fixture({
+            title: "Issue 2",
+            status: "open",
+            severity: "Low"
+        });
+
+        cy.visit('/dashboard');
+
+        cy
+            .get("[data-test-medium-gauge]")
+            .should('exist')
+            .should("contain", "Medium")
+            .should("contain", "50%");
+    });
 });
