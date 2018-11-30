@@ -9,9 +9,10 @@ nodemon({
   }
 });
 
+
+cypress.open().then(process.exit);
 nodemon.on('start', function () {
   console.log('Nodemon started');
-  cypress.open().then(process.exit);
 }).on('quit', function () {
   console.log('Nodemon stopped');
   process.exit();
